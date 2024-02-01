@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: hsl(229, 57%, 11%);
+  font-size: 14px;
+  background-image: url("images/bg-desktop.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 35px;
+}
+
+.container .card {
+  width: 350px;
+  height: auto;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 8px 100px 8px 8px;
+  padding: 2rem;
+}
+
+.container .card .card-logo {
+  margin-bottom: 2rem;
+}
+
+.container .card .card-icon {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.container .card .card-icon .box {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.container .card-rectangle {
+  width: 700px;
+  height: auto;
+  background-color: hsl(228, 56%, 26%);
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.container .card-rectangle .card-description {
+  margin-top: 1rem;
+  color: hsl(243, 100%, 93%);
+  margin-bottom: 1rem;
+}
+
+.container .card-rectangle .card-couta {
+  width: 100%;
+  height: 25px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 25px;
+  /* margin-top: 1.5rem; */
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.container .card-rectangle .card-couta .card-use {
+  width: 75%;
+  height: 20px;
+  background: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.container .card-rectangle .card-couta .card-use .bullet-white {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 25px;
+}
+
+.container .card-rectangle .card-remaining {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(243, 100%, 93%);
+}
+
+.container .card-rectangle .card-remaining span {
+  font-weight: bold;
+}
+
+.container .card-rectangle .couta {
+  width: 180px;
+  height: 130px;
+  position: absolute;
+  top: -50%;
+  right: 35px;
+}
+
+.container .card-rectangle .couta > .top-couta {
+  background-color: white;
+  height: 90px;
+  border-radius: 15px 15px 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .card-rectangle .couta > .top-couta h2 {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.container .card-rectangle .couta > .top-couta span {
+  font-size: 14px;
+  font-weight: 800;
+  color: hsl(229, 7%, 55%);
+}
+
+.container .card-rectangle .couta > .bottom-couta {
+  background-color: white;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .card-rectangle .couta > .bottom-couta > div {
+  background-color: hsl(228, 56%, 26%);
+  width: 150%;
+  height: 50px;
+  transform: skewX(45deg);
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+    gap: 10px;
+  }
+
+  .container .card {
+    width: 300px;
+  }
+
+  .container .card-rectangle {
+    width: 600px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("images/bg-mobile.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container .card {
+    width: 100%;
+  }
+
+  .container .card-rectangle {
+    width: 100%;
+  }
+
+  .container .card-rectangle .couta {
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    top: 90%;
+    right: 90px;
+  }
+
+  .container .card-rectangle .couta > .top-couta {
+    background-color: white;
+    height: 90px;
+    border-radius: 15px 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .card-rectangle .couta > .bottom-couta {
+    background-color: white;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container .card-rectangle .couta > .bottom-couta > div {
+    background-color: hsl(228, 56%, 26%);
+    width: 0;
+    height: 0;
+    transform: skewX(45deg);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+}
